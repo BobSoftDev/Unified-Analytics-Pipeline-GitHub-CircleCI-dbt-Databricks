@@ -1,0 +1,19 @@
+name: 'databricks_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'databricks_project'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+models:
+  databricks_project:
+    # This configuration applies the schema tags to the folders
+    bronze:
+      +schema: bronze
+    silver:
+      +schema: silver
+    gold:
+      +schema: gold
